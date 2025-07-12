@@ -1,0 +1,37 @@
+BÁO CÁO TÓM TẮT - SO SÁNH CÁC BỘ LỌC KHÔNG GIAN
+============================================================
+
+Thời gian thực hiện: 2025-07-12 11:04:44
+Số lượng bộ lọc được so sánh: 6
+
+XẾP HẠNG TỔNG HỢP (Composite Score):
+========================================
+🥇 NLM Filter: 0.5824
+🥈 Bilateral Filter: 0.4889
+🥉 Gaussian Filter: 0.3675
+4. Median Filter: 0.3651
+5. Mean Filter: 0.2709
+6. Noisy: -0.1000
+
+BỘ LỌC TỐT NHẤT THEO TỪNG TIÊU CHÍ:
+========================================
+🏆 PSNR: Bilateral Filter (28.1815)
+🏆 SSIM: NLM Filter (0.8186)
+🏆 MSE: NLM Filter (41.1993)
+🏆 Time (s): Noisy (0.0000)
+
+KHUYẾN NGHỊ SỬ DỤNG:
+========================================
+🎯 Tổng thể tốt nhất: NLM Filter
+⚡ Xử lý nhanh nhất: Noisy
+🔍 Chất lượng cao nhất: Bilateral Filter
+🏗️ Bảo toàn cấu trúc tốt nhất: NLM Filter
+
+KẾT LUẬN:
+========================================
+Dựa trên phân tích toàn diện các chỉ số PSNR, SSIM, MSE, thời gian xử lý 
+và khả năng bảo toàn cạnh, NLM Filter được đánh giá là 
+bộ lọc có hiệu suất tổng thể tốt nhất với điểm composite score 
+0.5824.
+
+Báo cáo được tạo tự động bởi hệ thống phân tích so sánh bộ lọc không gian.
