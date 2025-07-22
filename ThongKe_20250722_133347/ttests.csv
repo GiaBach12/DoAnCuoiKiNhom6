@@ -1,0 +1,16 @@
+Comparison,P-value,Significant
+Mean Filter vs Gaussian Filter,1.121937510399837e-05,Có ý nghĩa
+Mean Filter vs Bilateral Filter,7.008153610674712e-18,Có ý nghĩa
+Mean Filter vs Median Filter,0.3360102529154597,Không có ý nghĩa
+Mean Filter vs NLM Filter,4.3779426633533555e-18,Có ý nghĩa
+Mean Filter vs Noisy,4.940274673588126e-16,Có ý nghĩa
+Gaussian Filter vs Bilateral Filter,1.790961980395335e-10,Có ý nghĩa
+Gaussian Filter vs Median Filter,0.00042042890001816815,Có ý nghĩa
+Gaussian Filter vs NLM Filter,9.042440605087419e-10,Có ý nghĩa
+Gaussian Filter vs Noisy,1.7920152411088496e-21,Có ý nghĩa
+Bilateral Filter vs Median Filter,3.4420271894079676e-16,Có ý nghĩa
+Bilateral Filter vs NLM Filter,0.3007938723440312,Không có ý nghĩa
+Bilateral Filter vs Noisy,8.26679618517569e-29,Có ý nghĩa
+Median Filter vs NLM Filter,3.8167475071741666e-16,Có ý nghĩa
+Median Filter vs Noisy,9.590867881795839e-17,Có ý nghĩa
+NLM Filter vs Noisy,5.301747271301171e-30,Có ý nghĩa

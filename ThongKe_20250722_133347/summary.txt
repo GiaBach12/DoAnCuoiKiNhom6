@@ -1,0 +1,12 @@
+PHÂN TÍCH THỐNG KÊ - TÓM TẮT
+========================
+
+Thời gian: 2025-07-22 13:33:47
+Số bộ lọc: 6
+
+TOP 3 BỘ LỌC:
+1. Gaussian Filter: 0.433643
+2. Bilateral Filter: 0.432654
+3. Mean Filter: 0.428656
+
+BỘ LỌC TỐT NHẤT: Gaussian Filter
