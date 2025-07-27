@@ -161,12 +161,8 @@ g(x, y) = (1 / W) * Tổng [ f(x+i, y+j) * exp( - (||p-q||^2) / (2σ_s^2) - (f(p
 
 ## Tham khảo
 
-- Gonzalez & Woods – *Digital Image Processing*
 - Tài liệu của OpenCV và scikit-image
 - Slide bài giảng môn Xử lý ảnh số
-
-- ## Tài liệu tham khảo uy tín về xử lý ảnh số & bộ lọc không gian
-
 - **Sách kinh điển & giáo khoa**
     - Gonzalez, R.C. & Woods, R.E. *Digital Image Processing*, 4th Edition, Pearson.  
       *(Sách giáo khoa chuẩn quốc tế, bao phủ lý thuyết & thực hành bộ lọc không gian. Có chương chi tiết về các loại spatial filters, công thức, ví dụ minh họa.)* [10][14][13]
