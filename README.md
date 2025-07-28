@@ -28,7 +28,9 @@ Hệ thống này so sánh **5 bộ lọc không gian phổ biến** cho ảnh s
 
 - **Mục đích:** Làm mượt, giảm nhiễu đều.
 - **Công thức:**
-g(x, y) = (1 / (m * n)) * Tổng [f(x+i, y+j)], i = 0..m-1, j = 0..n-1
+  ```
+  g(x, y) = (1 / (m * n)) * Tổng [f(x+i, y+j)], i = 0..m-1, j = 0..n-1
+  ```
 - **Ví dụ:** Ảnh có nhiễu nhẹ sau khi lọc mean sẽ trở nên mờ, các đường biên giảm độ nét.
 - **Code:**
   ```
@@ -42,7 +44,9 @@ g(x, y) = (1 / (m * n)) * Tổng [f(x+i, y+j)], i = 0..m-1, j = 0..n-1
 
 - **Mục đích:** Làm mượt một cách tự nhiên, giữ biên khá tốt.
 - **Công thức:**
-G(x, y) = (1 / (2 * π * σ^2)) * exp( - (x^2 + y^2) / (2 * σ^2) )
+  ```
+  G(x, y) = (1 / (2 * π * σ^2)) * exp( - (x^2 + y^2) / (2 * σ^2) )
+  ```
 - **Ví dụ:** Ảnh nhiễu sẽ mịn hơn, các đường biên phần lớn vẫn được giữ lại.
 - **Code:**
   ```
@@ -56,7 +60,9 @@ G(x, y) = (1 / (2 * π * σ^2)) * exp( - (x^2 + y^2) / (2 * σ^2) )
 
 - **Mục đích:** Loại bỏ nhiễu "muối tiêu" (salt-and-pepper), giữ nét tốt.
 - **Công thức:**
-g(x, y) = Median{ f(x+i, y+j) | (i, j) trong vùng kernel }
+  ```
+  g(x, y) = Median{ f(x+i, y+j) | (i, j) trong vùng kernel }
+  ```
 - **Ví dụ:** Ảnh có các đốm đen trắng ngẫu nhiên sau khi qua bộ lọc median sẽ trở nên sạch rõ.
 - **Code:**
   ```
@@ -70,7 +76,9 @@ g(x, y) = Median{ f(x+i, y+j) | (i, j) trong vùng kernel }
 
 - **Mục đích:** Làm mịn nhưng vẫn giữ lại các cạnh sắc nét.
 - **Công thức:**
-g(x, y) = (1 / W) * Tổng [ f(x+i, y+j) * exp( - (||p-q||^2) / (2σ_s^2) - (f(p) - f(q))^2 / (2σ_r^2) ) ]
+  ```
+  g(x, y) = (1 / W) * Tổng [ f(x+i, y+j) * exp( - (||p-q||^2) / (2σ_s^2) - (f(p) - f(q))^2 / (2σ_r^2) ) ]
+  ```
 - **Ví dụ:** Dùng để làm mịn da trong ảnh chân dung mà vẫn giữ lại độ nét của mắt, mũi, miệng.
 - **Code:**
   ```
@@ -113,6 +121,44 @@ g(x, y) = (1 / W) * Tổng [ f(x+i, y+j) * exp( - (||p-q||^2) / (2σ_s^2) - (f(p
 - **Edge Preservation (Bảo toàn cạnh)**
   - *Mô tả:* Đánh giá khả năng bộ lọc giữ lại các chi tiết cạnh. Thường so sánh SSIM của ảnh biên (tạo bởi Canny, Sobel, Laplacian) trước và sau khi lọc.
 
+- **MSE (Mean Squared Error)**
+  - *Mô tả:* Đo lỗi trung bình bình phương giữa hai ảnh (càng thấp càng tốt).
+  - *Công thức:*
+    ```
+    MSE = (1 / (m * n)) * Σ [ I1(x, y) - I2(x, y) ]^2
+    ```
+    Trong đó I1 và I2 là hai ảnh cần so sánh, m và n là kích thước ảnh.
+
+- **SNR (Signal-to-Noise Ratio)**
+  - *Mô tả:* Tỷ số tín hiệu trên nhiễu, đánh giá chất lượng tín hiệu so với mức độ nhiễu (càng cao càng tốt).
+  - *Công thức:*
+    ```
+    SNR = 10 * log10(Mean(I^2) / MSE)
+    ```
+
+- **Entropy**
+  - *Mô tả:* Đo mức độ phức tạp/thông tin của ảnh; entropy càng lớn thì ảnh càng nhiều chi tiết.
+  - *Công thức:*
+    ```
+    Entropy = - Σ [p_i * log2(p_i)]
+    ```
+    Trong đó p_i là xác suất xuất hiện của mức xám i trong ảnh.
+
+- **Độ tương phản (Contrast)**
+  - *Mô tả:* Đo mức độ dao động cường độ sáng tối trên toàn ảnh.
+  - *Công thức:*
+    ```
+    Contrast = sqrt( (1/(m*n)) * Σ [I(x, y) - μ]^2 )
+    ```
+    Với μ là giá trị trung bình của ảnh.
+
+- **Độ sắc nét (Sharpness)**
+  - *Mô tả:* Đo tổng biến thiên hoặc phương sai của đạo hàm bậc 2 (Laplacian) ảnh; sắc nét càng cao giá trị càng lớn.
+  - *Công thức:*
+    ```
+    Sharpness = Var( Laplacian( I(x, y) ) )
+    ```
+    Laplacian là toán tử đạo hàm cấp 2 áp dụng lên ảnh.
 
 ---
 
