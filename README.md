@@ -165,27 +165,27 @@ g(x, y) = (1 / W) * Tổng [ f(x+i, y+j) * exp( - (||p-q||^2) / (2σ_s^2) - (f(p
 - Slide bài giảng môn Xử lý ảnh số
 - **Sách kinh điển & giáo khoa**
     - Gonzalez, R.C. & Woods, R.E. *Digital Image Processing*, 4th Edition, Pearson.  
-      *(Sách giáo khoa chuẩn quốc tế, bao phủ lý thuyết & thực hành bộ lọc không gian. Có chương chi tiết về các loại spatial filters, công thức, ví dụ minh họa.)* [10][14][13]
+      *(Sách giáo khoa chuẩn quốc tế, bao phủ lý thuyết & thực hành bộ lọc không gian. Có chương chi tiết về các loại spatial filters, công thức, ví dụ minh họa.)* 
     - Jain, A.K., *Fundamentals of Digital Image Processing*, Prentice Hall.  
-      *(Toàn diện về toán học nền tảng, các phép biến đổi ảnh cơ bản và nâng cao.)* [3]
+      *(Toàn diện về toán học nền tảng, các phép biến đổi ảnh cơ bản và nâng cao.)*
     - Solomon, C., Breckon, T., *Fundamentals of Digital Image Processing: A Practical Approach with Examples in Matlab*, Wiley.  
-      *(Rất phù hợp cho sinh viên muốn code trực tiếp; có giới thiệu phong phú về các lọc không gian, minh họa MATLAB.)* [3][18]
+      *(Rất phù hợp cho sinh viên muốn code trực tiếp; có giới thiệu phong phú về các lọc không gian, minh họa MATLAB.)* 
     - Maria Petrou & Costas Petrou, *Image Processing: The Fundamentals*, Wiley.  
-      *(Tập trung lý thuyết filter, biến đổi ảnh, có ví dụ, hình minh họa cụ thể.)* [3]
+      *(Tập trung lý thuyết filter, biến đổi ảnh, có ví dụ, hình minh họa cụ thể.)* 
 
 - **Bài báo và nguồn học thuật**
     - Desai, B. et al, *Study on Image Filtering -- Techniques, Algorithm and Applications*, arXiv:2207.06481  
-      *(Tổng hợp các kỹ thuật lọc kinh điển và ứng dụng lọc ảnh không gian trong khoa học máy tính.)* [11]
+      *(Tổng hợp các kỹ thuật lọc kinh điển và ứng dụng lọc ảnh không gian trong khoa học máy tính.)* 
     - ScienceDirect – Từ khóa: "Image Filtering"  
-      *(Nền tảng học thuật, truy cập nhiều chương review về bộ lọc không gian, lý thuyết và ứng dụng thực tiễn.)* [15][19]
+      *(Nền tảng học thuật, truy cập nhiều chương review về bộ lọc không gian, lý thuyết và ứng dụng thực tiễn.)* 
 
 - **Đặc biệt cho y sinh & nâng cao**
     - Geoff Dougherty, *Digital Image Processing for Medical Applications*, Cambridge University Press.  
-      *(Trình bày rõ các trường hợp sử dụng thực tiễn bộ lọc không gian trong ảnh y sinh, nhiều minh họa với dữ liệu thực tế.)* [6][9]
+      *(Trình bày rõ các trường hợp sử dụng thực tiễn bộ lọc không gian trong ảnh y sinh, nhiều minh họa với dữ liệu thực tế.)* 
 
 - **Nguồn trực tuyến chất lượng cao**
     - MathWorks Blog: Steve on Image Processing  
-      *(Chia sẻ chuyên sâu về lý thuyết, ví dụ thực hành về filter, image enhancement và xử lý ảnh trên MATLAB.)* [8]
+      *(Chia sẻ chuyên sâu về lý thuyết, ví dụ thực hành về filter, image enhancement và xử lý ảnh trên MATLAB.)* 
     - OpenCV, scikit-image Documentation  
       *(Thư viện chuẩn quốc tế, đầy đủ hướng dẫn và code mẫu bộ lọc ảnh.)*
 
